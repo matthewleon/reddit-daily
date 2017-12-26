@@ -1,9 +1,6 @@
-module Main where
+module BaumSweet (bsSeq) where
 
 import qualified Data.Vector as V
-
-main :: IO ()
-main = print . fmap fromEnum . bsSeq =<< readLn
 
 bsSeq :: Int -> V.Vector Bool
 bsSeq sz = bs
