@@ -3,7 +3,7 @@ module Main where
 import qualified Data.Array as A
 
 main :: IO ()
-main = print . A.elems $ fromEnum <$> bsSeq 200
+main = print . A.elems . fmap fromEnum . bsSeq =<< readLn
 
 bsSeq :: Int -> A.Array Int Bool
 bsSeq sz = bs
