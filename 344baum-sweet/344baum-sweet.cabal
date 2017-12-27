@@ -33,7 +33,7 @@ benchmark benchmark-baumsweet
   type:           exitcode-stdio-1.0
   hs-source-dirs: bench
   main-is:        BenchMain.hs
-  ghc-options:         -Wall -O2
+  ghc-options:    -Wall -O2
   -- other-modules:
   build-depends:  base
                 , 344baum-sweet
