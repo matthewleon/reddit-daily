@@ -25,6 +25,7 @@ executable baumsweet
   hs-source-dirs:      app
   build-depends:       base >= 4.7 && < 5
                      , 344baum-sweet
+                     , vector
   main-is:             Main.hs
   ghc-options:         -Wall -O2
   default-language:    Haskell2010

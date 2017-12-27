@@ -22,9 +22,8 @@ bsSeq' :: Int -> VU.Vector Bool
 bsSeq' sz = runST $ do
   bs <- VUM.unsafeNew sz
   VUM.unsafeWrite bs 0 True
-  forM_ [1..(sz - 1)] (\n -> VUM.unsafeWrite bs n =<<
+  forM_ [1..(sz - 1)] $ \n -> VUM.unsafeWrite bs n =<<
     if n `mod` 4 == 0
       then VUM.unsafeRead bs (n `div` 4)
       else if even n then pure False else VUM.unsafeRead bs ((n - 1) `div` 2)
-    )
   VU.unsafeFreeze bs
